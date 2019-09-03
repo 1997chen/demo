@@ -38,7 +38,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.chen.springdemo.user.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.springboot.demo.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

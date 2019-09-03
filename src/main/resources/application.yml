@@ -1,6 +1,6 @@
 server:
   servlet:
-    #ĞŞ¸Ä·ÃÎÊÏîÄ¿·ÃÎÊÂ·¾¶
+    #ä¿®æ”¹è®¿é—®é¡¹ç›®è®¿é—®è·¯å¾„
     context-path: /demo
 mybatis:
   type-aliases-package: com.springboot.demo.model.pojo
@@ -17,16 +17,16 @@ spring:
       username: root
       password: 123456
       initial-size: 10
-      #×î´óÁ¬½Ó³ØÊı
+      #æœ€å¤§è¿æ¥æ± æ•°
       max-active: 200
       min-idle: 10
       pool-prepared-statements: true
       max-wait: 60000
-      #¼ì²âĞèÒª¹Ø±ÕµÄ¿ÕÏĞÁ¬½Ó£¬µ¥Î»ÊÇºÁÃë
+      #æ£€æµ‹éœ€è¦å…³é—­çš„ç©ºé—²è¿æ¥ï¼Œå•ä½æ˜¯æ¯«ç§’
       time-between-eviction-runs-millis: 60000
   mvc:
     static-path-pattern: /**
-      #pathmatch:
+    #pathmatch:
     #use-suffix-pattern: true
     #use-registered-suffix-pattern: true
   resources:
@@ -34,37 +34,37 @@ spring:
 
   #redis
   redis:
-    #redisÊı¾İ¿âË÷Òı£¨Ä¬ÈÏÎª0£©
+    #redisæ•°æ®åº“ç´¢å¼•ï¼ˆé»˜è®¤ä¸º0ï¼‰
     database: 0
     host: 127.0.0.1
     port: 6379
-    #redis·şÎñÆ÷Á¬½ÓÃÜÂë£¨Ä¬ÈÏÎª¿Õ£©
+    #redisæœåŠ¡å™¨è¿æ¥å¯†ç ï¼ˆé»˜è®¤ä¸ºç©ºï¼‰
     #password:
-    #Á¬½Ó³¬Ê±Ê±¼ä
+    #è¿æ¥è¶…æ—¶æ—¶é—´
     timeout: 10000ms
     jedis:
       pool:
-        #Á¬½Ó³Ø×î´óÁ¬½ÓÊı(Ê¹ÓÃ¸ºÖµ±íÊ¾Ã»ÓĞÏŞÖÆ)
+        #è¿æ¥æ± æœ€å¤§è¿æ¥æ•°(ä½¿ç”¨è´Ÿå€¼è¡¨ç¤ºæ²¡æœ‰é™åˆ¶)
         max-active: 1000
-        #Á¬½Ó³Ø×î´ó×èÈûÊ±¼ä£¨Ê¹ÓÃ¸ºÖµ±íÊ¾Ã»ÓĞÏŞÖÆ£©
+        #è¿æ¥æ± æœ€å¤§é˜»å¡æ—¶é—´ï¼ˆä½¿ç”¨è´Ÿå€¼è¡¨ç¤ºæ²¡æœ‰é™åˆ¶ï¼‰
         max-wait: 1000ms
-        #Á¬½Ó³Ø×î´ó¿ÕÏĞÁ¬½ÓÊı
+        #è¿æ¥æ± æœ€å¤§ç©ºé—²è¿æ¥æ•°
         max-idle: 8
-        #Á¬½Ó³Ø×îĞ¡¿ÕÏĞÁ¬½ÓÊı
+        #è¿æ¥æ± æœ€å°ç©ºé—²è¿æ¥æ•°
         min-idle: 4
   servlet:
     multipart:
       max-file-size: 100
       max-request-size: 100
 
-#·ÖÒ³
+#åˆ†é¡µ
 pagehelper:
-  #Ö¸¶¨·ÖÒ³²å¼şÊ¹ÓÃÄÄÖÖ·½ÑÔ
+  #æŒ‡å®šåˆ†é¡µæ’ä»¶ä½¿ç”¨å“ªç§æ–¹è¨€
   helper-dialect: mysql
-  #µ±¸Ã²ÎÊıÉèÖÃÎª true Ê±£¬pageNum<=0 Ê±»á²éÑ¯µÚÒ»Ò³£¬ pageNum>pages£¨³¬¹ı×ÜÊıÊ±£©£¬
-  #»á²éÑ¯×îºóÒ»Ò³¡£Ä¬ÈÏfalse Ê±£¬Ö±½Ó¸ù¾İ²ÎÊı½øĞĞ²éÑ¯¡£
+  #å½“è¯¥å‚æ•°è®¾ç½®ä¸º true æ—¶ï¼ŒpageNum<=0 æ—¶ä¼šæŸ¥è¯¢ç¬¬ä¸€é¡µï¼Œ pageNum>pagesï¼ˆè¶…è¿‡æ€»æ•°æ—¶ï¼‰ï¼Œ
+  #ä¼šæŸ¥è¯¢æœ€åä¸€é¡µã€‚é»˜è®¤false æ—¶ï¼Œç›´æ¥æ ¹æ®å‚æ•°è¿›è¡ŒæŸ¥è¯¢ã€‚
   reasonable: true
-  #Ö§³ÖÍ¨¹ı Mapper ½Ó¿Ú²ÎÊıÀ´´«µİ·ÖÒ³²ÎÊı
+  #æ”¯æŒé€šè¿‡ Mapper æ¥å£å‚æ•°æ¥ä¼ é€’åˆ†é¡µå‚æ•°
   support-methods-arguments: true
 logging:
   config: classpath:logback-spring.xml
