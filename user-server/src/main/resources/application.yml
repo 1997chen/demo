@@ -1,0 +1,40 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: user-server
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+      initial-size: 10
+      #最大连接池数
+      max-active: 200
+      min-idle: 10
+      pool-prepared-statements: true
+      max-wait: 60000
+      #检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+
+  jmx:
+    enabled: true
+
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:1111
+        instance:
+          prefer-ip: true
+          #service-url:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
